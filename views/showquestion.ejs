@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>FORUM | Care for You</title>
+<meta name="theme-color" content="#26A69A">
+  <link rel="icon" type="image/iconx" href="images/logo.png">
+  <!-- CSS  -->
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<!--   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
+<link type="text/css" href="stylesheets/materialize.min.css" rel="stylesheet"/>
+<link type="text/css" href="stylesheets/style.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="/diseases">Diseases</a></li>
+    <li><a href="/medicines">Medicines</a></li>
+    <li><a href="/news">News</a></li>
+    <li class="/divider"></li>
+    <li><a href="#!">About us</a></li>
+  </ul>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container-fluid">
+      <a id="logo-container" href="#" class="brand-logo"><img src="images/main_logo.png" alt="Care For You" width="227" height="56"/></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li class="active"><a href="/"><span>Home</span></a></li>
+        <li><a href="/forum"><span>Forum</span></a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><span style="margin: 0px;">More<i class="material-icons right" style="margin: 0px;">arrow_drop_down</i></span></a></li>
+        <% if(user) {%>
+        <li><a style="color:#26A69A" href="/logout">Logout</a></li>
+        <%}else{%>
+        <li><a style="color:#26A69A; padding-right:0; padding-left:30px;" href="#modal_login" class="modal-trigger"><span style="margin: 0px;">Login<i class="material-icons right" style="margin: 0px;">perm_identity</i></span></a></li>
+        <li><a style="color:#26A69A;" href="#modal_signup" class="modal-trigger"><span style="margin: 0px;">Register<i class="material-icons right" style="margin: 0px;">perm_identity</i></span></a></li>
+        <%}%>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/forum">Forum</a></li>
+        <li><a href="/diseases">Diseases</a></li>
+        <li><a href="/medicines">Medicines</a></li>
+        <li><a href="/news">News</a></li>
+        <% if(user) {%>
+        <li><a style="color:#26A69A" href="/logout">Logout</a></li>
+        <%}else{%>
+        <li><a style="color:#26A69A;" href="#modal_login" class="modal-trigger">Login<i class="material-icons right">perm_identity</i></a></li>
+        <li><a style="color:#26A69A;" href="#modal_signup" class="modal-trigger">Register<i class="material-icons right">perm_identity</i></a></li>
+        <%}%>
+      </ul>
+      
+    </div>
+  </nav>
+
+<div align="center" style="color:#26a69a"><h2>WELCOME TO FORUM</h2>
+<h5>Here Are The Recent Questions</h5>
+<% if(user){%>
+<a class="waves-effect waves-light btn modal-trigger" href="#addquestion">Add Question</a>
+<%}%>
+</div>
+
+  <div class="container">
+<ul class="collapsible popout" data-collapsible="accordion">
+    
+<% if( Array.isArray(question) ) {
+question.forEach( function( docs ){ %>
+    <li>
+      <div class="collapsible-header"><a href='post/<%=docs._id%>/<%= docs.title%>'><%= docs.title %></a> 
+      <div class="row">
+        <div class="col s3"><p style="color:#A7A7A7;">Views :<%=docs.views%></p></div>
+        <div class="col s7 push-s3"><p style="color:#a7a7a7;">Posted by: <%=docs.postedby%></p>
+        </div>
+      </div>
+        <div class="row">
+         <div class="col s7 push-s6"><p style="color:#a7a7a7;font-size:12px">At: <%=docs.date%></p></div>
+        </div>
+    </div>
+      <div class="collapsible-body"><p><%= docs.description %></p></div>
+    </li>
+<%	
+})
+}
+ %>    
+</ul>
+</div>
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project. We aim to provide a complete health care system to make your life easier.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Forum</a></li>
+            <li><a class="white-text" href="diseases">Diseases</a></li>
+            <li><a class="white-text" href="news">News</a></li>
+            <li><a class="white-text" href="medicines">Medicines</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <div>
+            <cite title="Sharlet Shubham"><a class="white-text" href="mailto:#" style="font-style: normal;"><i class="material-icons left">email</i>Email: shsh@gmail.com</a></cite>
+          </div>
+          <br>
+          <li class="white-text" style="display:inline; padding-right: 10px;">Follow us: </li>
+          <li style="display:inline; padding-right: 10px;"><a href="#" title="facebook"><i class="fa fa-facebook-square fa-2x" style="color: #3D5B99;" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#3D5B99'"></i></a></li>
+          <li style="display:inline; padding-right: 10px;"><a href="#" title="twitter"><i class="fa fa fa-twitter-square fa-2x" style="color: #58AEE8;" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#58AEE8'"></i></a></li>
+          <li style="display:inline; padding-right: 10px;"><a href="#" title="google+"><i class="fa fa-google-plus-square fa-2x" style="color: #EA4335" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#EA4335'"></i></a></li>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container" align="center">
+        <cite title="Sharlet Shubham" style="font-style: normal;">Made by <a class="brown-text text-lighten-3" href="#">SS</a></cite>
+      </div>
+    </div>
+  </footer>
+    <div id="modal_signup" class="modal">
+    <form method="POST" action="/signup"> 
+      <div class="modal-content">
+        <h4 align="center">Sign Up</h4>
+        <div class="form-group">
+          <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email"class="form-control" id="email" placeholder="Email Id" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="password"class="form-control" id="password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="cpassword"class="form-control" id="confirmpassword" placeholder="Confirm Password" required>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit"  class=" modal-action waves-effect waves-green btn-flat">Register</button>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </form>
+  </div>
+
+  <div id="modal_login" class="modal">
+    <form method="POST" action="/login">
+      <div class="modal-content">
+        <h4 align="center">Log In</h4>
+        <div class="form-group">
+          <input type="text" name="username" class="form-control" id="username" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="password"class="form-control" id="password" placeholder="Password" required>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class=" modal-action waves-effect waves-green btn-flat">Log In</button>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </form>
+  </div>
+<div id="addquestion" class="modal">
+    <form method="POST" action="/addquestion">
+    <div class="modal-content">
+      <h4 align="center">Add Question</h4>
+        <div class="form-group">
+          <input type="text" name="title" class="form-control"  placeholder="title" required>
+        </div>
+        <div class="form-group">
+
+          <textarea type="text" name="description" class="form-control materialize-textarea" id="description" placeholder="description" required></textarea>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="waves-effect waves-light btn" >Post Question</button>
+    </div>
+    </form>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script type="text/javascript" src="javascripts/materialize.min.js"></script>
+  <script src="javascripts/init.js"></script>
+
+  <script>
+    $( document ).ready(function(){
+    
+      $(".dropdown-button").dropdown();
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+  </script>
+  <script type="text/javascript">
+    $(window).load(function () {
+    var images = ['images/background1.jpg', 'images/background2.jpg', 'images/background3.jpg'];
+    var i = 0;
+    function changeBackground() {
+        $('.slider').css('background-image', function () {
+            if (i >= images.length) {
+                i = 0;
+            }
+            return 'url(' + images[i++] + ')';
+        });
+    }
+    // Call it on the first time
+    changeBackground();
+    // Set an interval to continue
+    setInterval(changeBackground, 5000);
+});
+  </script>
+  </body>
+</html>
