@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>DISEASES | Care for You</title>
+    <link rel="icon" type="image/iconx" href="images/logo.png">
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <style type="text/css">
+      @media only screen and (min-width: 600px)
+      {
+        .card-content{
+          height:200px;
+        }  
+      }
+      .card-action a{
+        color: #26a69a !important;
+      }
+      .card-action a:hover{
+        color: #000 !important;
+        font-weight: bold;
+      }
+      .collapsible-header{
+        font-weight: bold;
+      }
+      .tabs a{
+        color: #26a69a !important;
+      }
+      .tabs a:hover{
+        font-weight: normal;
+      }
+      .tabs .indicator{
+        background-color: #26a69a;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="dropdown1" class="dropdown-content">
+      <li class="active"><a href="#">Diseases</a></li>
+      <li><a href="medicines.html">Medicines</a></li>
+      <li><a href="news.html">News</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">About us</a></li>
+    </ul>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container-fluid">
+        <a id="logo-container" href="index.html" class="brand-logo"><img src="images/main_logo.png" alt="Care For You" width="227" height="56"/></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html"><span>Home</span></a></li>
+          <li><a href="#"><span>Forum</span></a></li>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><span style="margin: 0px;">More<i class="material-icons right" style="margin: 0px;">arrow_drop_down</i></span></a></li>
+          <li><a style="color:#26A69A; padding-right:0; padding-left:30px;" href="#modal_login" class="modal-trigger"><span style="margin: 0px;">Login<i class="material-icons right" style="margin: 0px;">perm_identity</i></span></a></li>
+          <li><a style="color:#26A69A;" href="#modal_signup" class="modal-trigger"><span style="margin: 0px;">Register<i class="material-icons right" style="margin: 0px;">perm_identity</i></span></a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#">Forum</a></li>
+          <li><a href="diseases.html">Diseases</a></li>
+          <li><a href="medicines.html">Medicines</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a style="color:#26A69A;" href="#modal_login" class="modal-trigger">Login<i class="material-icons right">perm_identity</i></a></li>
+          <li><a style="color:#26A69A;" href="#modal_signup" class="modal-trigger">Register<i class="material-icons right">perm_identity</i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="modal_signup" class="modal">
+      <form>
+        <div class="modal-content">
+          <h4 align="center">Sign Up</h4>
+          <div class="form-group">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email"class="form-control" id="email" placeholder="Email Id" required>
+          </div>
+          <div class="form-group">
+            <input type="password" name="password"class="form-control" id="password" placeholder="Password" required>
+          </div>
+          <div class="form-group">
+            <input type="password" name="cpassword"class="form-control" id="confirmpassword" placeholder="Confirm Password" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action waves-effect waves-green btn-flat">Register</a>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </form>
+    </div>
+
+    <div id="modal_login" class="modal">
+      <form>
+        <div class="modal-content">
+          <h4 align="center">Log In</h4>
+          <div class="form-group">
+            <input type="email" name="email"class="form-control" id="email" placeholder="Email Id" required>
+          </div>
+          <div class="form-group">
+            <input type="password" name="password"class="form-control" id="password" placeholder="Password" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action waves-effect waves-green btn-flat">Log In</a>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col l10 m10 s12 push-l1 push-m1">
+          <div class="card" style="background-image: url(images/diseases.png);">
+            <div class="card-content white-text" >
+              <span class="card-title"><h4>Human Diseases</h4></span>
+              <p style="font-size: 20px;">Click on the disease name for its details.</p>
+            </div>
+            <div class="card-action">
+              <a href="#a">A</a>
+              <a href="#b">B</a>
+              <a href="#c">C</a>
+              <a href="#d">D</a>
+              <a href="#e">E</a>
+              <a href="#f">F</a>
+              <a href="#g">G</a>
+              <a href="#h">H</a>
+              <a href="#i">I</a>
+              <a href="#j">J</a>
+              <a href="#k">K</a>
+              <a href="#l">L</a>
+              <a href="#m">M</a>
+              <a href="#n">N</a>
+              <a href="#o">O</a>
+              <a href="#p">P</a>
+              <a href="#q">Q</a>
+              <a href="#r">R</a>
+              <a href="#s">S</a>
+              <a href="#t">T</a>
+              <a href="#u">U</a>
+              <a href="#v">V</a>
+              <a href="#w">W</a>
+              <a href="#x">X</a>
+              <a href="#y">Y</a>
+              <a href="#z">Z</a>
+            </div>
+          </div>
+
+          <ul class="collapsible popout" data-collapsible="accordion">
+            <li id="a">
+              <div class="collapsible-header">Asthma</div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <div class="col s12" style="padding-bottom:20px;">
+                    <ul class="tabs">
+                      <li class="tab col s3"><a href="#asthma1">ABOUT</a></li>
+                      <li class="tab col s3"><a href="#asthma2">CAUSES</a></li>
+                      <li class="tab col s3"><a href="#asthma3">SYMPTOMS</a></li>
+                      <li class="tab col s3"><a href="#asthma4">PREVENTION</a></li>
+                    </ul>
+                  </div>
+                  <div id="asthma1" class="col s12">The most commonly discussed respiratory disease after the common cold.
+               An asthma attack leads to lung infection, tiredness, cough and breathing difficulties.The attack can be seasonal when the pollen count is high in the atmosphere.</div>
+                  <div id="asthma2" class="col s12">
+                    Allergens, Infections, environmental pollutants or non-specific stimuli such as exercise and emotional states. <br><br> Between 50 and 70 per cent of adults with asthma suffer from allergies. <br><br>In children under three years of age, viral infections are likely to be the most common trigger. After three years, allergies also begin to play an increasing role as a trigger.  <br><br>After 20 years of age, occupational exposure to toxic substances and allergens also can be important triggers for asthma. <br><br>
+                    <img class="responsive-img" src="images/asthma.png">
+                  </div>
+                  <div id="asthma3" class="col s12">
+                    <img class="responsive-img" src="images/asthma1.png"><br> <br>
+               Asthma is a condition in which the airways of the lungs become either narrowed or completely blocked, obstructing normal breathing.<br><br>Coughing, especially at night, during exercise or when laughing.<br><br>Chest tightness.<br><br>
+               Wheezing (a whistling or squeaky sound in your chest when you breathe, especially when exhaling)<br><br>
+               Any asthma symptom is serious and can become deadly if left untreated.
+                  </div>
+                  <div id="asthma4" class="col s12">
+                    <img class="responsive-img" src="images/asthma2.png"><br> <br>
+               During an acute attack of Asthma the following should be done:
+               <br> <br>
+                Always keep your blue inhaler with you.<br> <br>
+               Take a puff from the inhaler.<br> <br>
+               Loosen any tight clothing and sit-up.<br> <br>
+               Open the windows of the room if room is warm and humid.<br> <br>
+               If no immediate improvement felt during an attack, continue to take one puff of inhaler every minute for 3 to 5 minutes or until symptoms improve.<br> <br>
+               If your symptoms do not improve in five minutes or if you are in   doubt, call your doctor or visit the nearest hospital.<br> <br>
+                <b>Long-term treatment strategies:</b><br> <br>
+               Controlling the environmental factors<br> <br>
+                Controlling asthma attacks by taking regular medications<br> <br>
+                Monitoring Lung Function regularly
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="b">
+              <div class="collapsible-header">Back Pain</div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <div class="col s12" style="padding-bottom:20px;">
+                    <ul class="tabs">
+                      <li class="tab col s3"><a href="#backpain1">ABOUT</a></li>
+                      <li class="tab col s3"><a href="#backpain2">CAUSES</a></li>
+                      <li class="tab col s3"><a href="#backpain3">SYMPTOMS</a></li>
+                      <li class="tab col s3"><a href="#backpain4">PREVENTION</a></li>
+                    </ul>
+                  </div>
+                  <div id="backpain1" class="col s12"><img class="responsive-img" src="images/backpain1.png" ><br> <br>
+                Four out of five adults will experience at least one bout of back pain at some time in their lives. Structurally backache is a condition that usually is caused when one or more structures of the back gets affected and these includes muscles, cartilage, bones or spinal cord.</div>
+                  <div id="backpain2" class="col s12">
+                    Triggering Factors -The episode of back ache might result either from a strenuous event or previous history. Even psycho-social risk factors like stress, distress, anxiety, depression, cognitive functioning, job dissatisfaction and mental stress can play a role in triggering back ache. There may be some deep underlying causes of low back pain, few of which include:<br><br>
+                Fracture of vertebral bones. <br><br>
+                Slipped disc; disc bulges out of vertebral joint and puts pressure on spinal nerves. <br><br>
+                Spinal stenosis; owing to narrowing of spinal space,pressure is induced upon the spinal nerves.<br><br>
+                Spondylolithesis; when one of the back bones slips forward and out of position.<br><br>
+                Degenerative disc disease; when the discs in spinal cord gradually gets worn out.<br><br>
+                Osteoarthritis; a wear-and-tear disease of bones.<br><br>
+                Rheumatoid arthritis; an inflammatory condition of joints.<br><br>
+                Carcinoma or benign tumors.<br><br>
+                Kidney stones.<br><br>
+                Endometriosis.<br><br>
+                Pelvic inflammatory disease in females.
+                  </div>
+                  <div id="backpain3" class="col s12">
+                    <b>Category of Pain:</b><br> <br>
+                Acute - if lasting up to six weeks <br> <br>
+                Sub-acute - If lasting up to three months <br> <br>
+                Chronic - If longer than three months <br> <br>
+                Warning Signs when medical help is required:<br> <br>
+                Pain getting significantly worse<br> <br>
+                Pain affecting every day activities<br> <br>
+                Groin weakness or numbness<br> <br>
+                Weakness or numbness in one or both the legs<br> <br>
+                Arm or hand weakness<br> <br>
+                Tingling, or numbness in arms radiating to fingers<br> <br>
+                Loss of bowel or bladder control<br> <br>
+               A fever (high temperature) accompanied with redness or swelling on back 
+                Constant pain, even at night
+                  </div>
+                  <div id="backpain4" class="col s12">
+                    <img class="responsive-img" src="images/backpain2.png"><br> <br>
+                Stay active and perform all the daily activities normally<br> <br>
+                Avoid bed rest for extended periods as it might make low back pain worse <br> <br>
+                Apply hot pack to the affected area if pain is chronic or cold packs if pain is acute. Traction for Back Pain – This has been the mainstay of treatment for back pain in the past. <br> <br>
+                Electrical Stimulation:<br> <br>
+                Transcutaneous electrical nerve stimulation (TENS) may help stop pain by blocking nerve signals from reaching your brain. A physical therapist places electrodes on your skin near the area of your pain. TENS may relieve pain in your leg due to inflammation or compression of nerves in your back.
+                This treatment involves manipulation and massage of your spine and back muscles to relieve mild-to-moderate pain.<br> <br>
+               Acupuncture:An acupuncturist inserts hair-thin needles under your skin. The needles usually stay in for 15 to 30 minutes. The insertion causes little or no pain. Expect to have several sessions. Research suggests pain relief may come from the release of endorphins, your body's natural painkillers.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="c">
+              <div class="collapsible-header">Common Cold</div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <div class="col s12" style="padding-bottom:20px;">
+                    <ul class="tabs">
+                      <li class="tab col s3"><a href="#commoncold1">ABOUT</a></li>
+                      <li class="tab col s3"><a href="#commoncold2">CAUSES</a></li>
+                      <li class="tab col s3"><a href="#commoncold3">SYMPTOMS</a></li>
+                      <li class="tab col s3"><a href="#commoncold4">PREVENTION</a></li>
+                    </ul>
+                  </div>
+                  <div id="commoncold1" class="col s12"><img class="responsive-img" src="images/commoncold1.png"><br> <br>
+                Cold is an illness that is short in duration, usually less than two weeks, does not usually produce fever, except in children. It is most prevalent among children, and seem to be related to youngsters' relative lack of resistance to infection and to contacts with other children in schools. The common cold causes irritation and drainage in any or all of the airways including the nose, sinuses, throat, voice box, and often the bronchial tubes.</div>
+                  <div id="commoncold2" class="col s12">
+                    Depending on the virus type, any or all of the following routes of transmission may be common:<br> <br>
+                Touching infectious respiratory secretions on skin or personal objects which have been contaminated by the patient. <br> <br>
+                Inhaling relatively large particles of respiratory secretions transported briefly in the air.<br> <br>
+                Inhaling droplets, smaller infectious particles from coughing or sneezing by patients suffering from cold.
+                  </div>
+                  <div id="commoncold3" class="col s12">
+                    <img class="responsive-img" src="images/commoncold2.png" align="center"><br> <br>
+                Sore throat. <br> <br>
+                Running nose or Leaky nose.<br> <br>
+                Sneezing and cough. <br> <br>
+                Nasal congestion.<br> <br>
+                Headache and body pain. <br> <br>
+                Low grade fever (more likely in infants and young children).<br> <br>
+                Green or yellow sputum or nasal secretions suggest a secondary bacterial infections of the middle ear or sinusitis requiring treatment with antibiotics. Cold symptoms can last from two to 14 days, but two-thirds of people recover in a week. If symptoms occur often or last much longer than two weeks, with high fever, significantly swollen glands, severe facial pain in the sinuses, and a cough that produces mucus, it indicates a complication or more serious illness requiring a doctor's attention.
+                  </div>
+                  <div id="commoncold4" class="col s12">
+                    <img class="responsive-img" src="images/commoncold3.png" align="center"><br> <br>
+             Infection of cold disappears within seven to ten days. Usually, common cold does not require any treatment. But, if the symptoms continue, or if certain pre-existing respiratory condition become worse, it indicates the involvement of bacteria in addition to the virus. In such condition antibiotics might have to be administrated to improve the condition. Only symptomatic treatment is available for uncomplicated cases of the common cold: bed rest, plenty of fluids, gargling with warm salt water, petroleum jelly for a raw nose, and aspirin or acetaminophen to relieve headache or fever.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="d">
+              <div class="collapsible-header">Diabetes</div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <div class="col s12" style="padding-bottom:20px;">
+                    <ul class="tabs">
+                      <li class="tab col s3"><a href="#diabetes1">ABOUT</a></li>
+                      <li class="tab col s3"><a href="#diabetes2">CAUSES</a></li>
+                      <li class="tab col s3"><a href="#diabetes3">SYMPTOMS</a></li>
+                      <li class="tab col s3"><a href="#diabetes4">PREVENTION</a></li>
+                    </ul>
+                  </div>
+                  <div id="diabetes1" class="col s12"> In diabetes, lack of insulin or the resistance of your cells to insulin prevents the right amount of glucose from entering your cells. The unused glucose builds up in your blood, a condition called hyperglycemia.
+              The disease occurs in two types: <br><br>
+              <b>Type 1 diabetes:</b> This is the type of diabetes that generally affects young people and requires treatment with insulin.<br> <br>
+              <b>Type 2 diabetes:</b> This type of diabetes generally develops after age 40. Diabetes can develop gradually, often without symptoms, over many years.</div>
+                  <div id="diabetes2" class="col s12">
+                    <b>Type 1 Diabetes:</b><br><br> This type of diabetes is an autoimmune disease. Your immune system turns on itself and destroys the insulin-producing cells in your pancreas.It usually develops in childhood or teen years, it can appear later.<br><br>
+                <b>Causes:</b><br><br>
+                Viral or bacterial infection<br><br>
+                Chemical toxins within food<br><br>
+                <b>Type 2 Diabetes:</b> <br><br>In this type, your pancreas makes some insulin, but not enough. Your cells also can become resistant to insulin's effects, keeping insulin from escorting enough glucose into your body's cells.<br><br>
+                <b>Causes:</b><br><br>
+                Obesity<br><br>
+                <img class="responsive-img" src="images/diabetes1.png"><br> <br>
+                Living a sedentary lifestyle<br><br>
+                Increasing age<br><br>
+                Bad diet
+                  </div>
+                  <div id="diabetes3" class="col s12">
+                    <img class="responsive-img" src="images/diabetes2.png"><br> <br>
+                <b>Extreme thirst - </b>The process of dehydration makes you thirsty.<br><br><b>Blurry vision - </b>High blood sugar may cause new blood vessels to form and may damage old blood vessels on the retina at the back of your eye.
+                <br><br>
+                <b>Weight loss - </b>To make up for the lost fuel, your body burns fat reserves, and you may lose weight.<br><br>
+                <b>Fatigue - </b>When your cells don't get enough glucose, their primary fuel source, fatigue results.<br><br>
+                <b>Hunger - </b>Burning of fat reserves also may make you hungry.
+                  </div>
+                  <div id="diabetes4" class="col s12">
+                   <img class="responsive-img" src="images/diabetes3.png"><br> <br>
+                Controlling blood sugar is the single most important thing you can do to prevent long-term complications of diabetes. <br> <br>
+                For type 1 diabetes, you must take insulin. Today, most people use synthetic insulin, which is chemically identical to human insulin.<br> <br>
+                If you have type 2 diabetes, you may be able to control your blood sugar with weight control, diet and exercise. Or, you may need to combine these approaches with medication.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="e">
+              <div class="collapsible-header">Epilepsy</div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <div class="col s12" style="padding-bottom:20px;">
+                    <ul class="tabs">
+                      <li class="tab col s3"><a href="#epilepsy1">ABOUT</a></li>
+                      <li class="tab col s3"><a href="#epilepsy2">CAUSES</a></li>
+                      <li class="tab col s3"><a href="#epilepsy3">SYMPTOMS</a></li>
+                      <li class="tab col s3"><a href="#epilepsy4">PREVENTION</a></li>
+                    </ul>
+                  </div>
+                  <div id="epilepsy1" class="col s12"><img class="responsive-img" src="images/epilepsy1.jpg"><br><br>Epilepsy is a group of related disorders characterized by a tendency for recurrent seizures. There are different types of epilepsy and seizures. Epilepsy drugs are prescribed to control seizures, and rarely surgery is necessary if medications are ineffective.</div>
+                  <div id="epilepsy2" class="col s12">
+                    Causes of epilepsy vary by age of the person. Some people with no clear cause of epilepsy may have a genetic cause. But what's true for every age is that the cause is unknown for about half of everyone with epilepsy.
+                    <ul>
+                      <li>Some people with no known cause of epilepsy may have a genetic form of epilepsy. One or more genes may cause the epilepsy or epilepsy may be caused by the way some genes work in the brain. The relationship between genes and seizures can be very complex and genetic testing is not available yet for many forms of epilepsy.</li> 
+                      <li>About 3 out of 10 people have a change in the structure of their brains that causes the electrical storms of seizures.</li>
+                      <li>Some young children may be born with a structural change in an area of the brain that gives rise to seizures. </li>
+                      <li>About 3 out of 10 children with autism spectrum disorder may also have seizures. The exact cause and relationship is still not clear. </li>
+                      <li>Infections of the brain are also common causes of epilepsy. The initial infections are treated with medication, but the infection can leave scarring on the brain that causes seizures at a later time. </li>
+                      <li>People of all ages can have head injuries, though severe head injuries happen most often in young adults.</li>
+                      <li>In middle age, strokes, tumors and injuries are more frequent.</li>
+                      <li>In people over 65, stroke is the most common cause of new onset seizures. Other conditions such as Alzheimer’s disease or other conditions that affect brain function can also cause seizures.</li>
+                    </ul>
+                  </div>
+                  <div id="epilepsy3" class="col s12">
+                    <img class="responsive-img" src="images/epilepsy2.jpg">
+                    <br>
+                    During a seizure, a person experiences abnormal behaviour, symptoms and sensations, sometimes including loss of consciousness. There are few symptoms between seizures.
+                    <br>
+                    <ul>
+                      <li>Whole body: fainting or fatigue</li>
+                      <li>Muscular: rhythmic muscle contractions or muscle spasms</li>
+                      <li>Sensory: aura or pins and needles</li>
+                      <li>Cognitive: amnesia or mental confusion</li>
+                      <li>Psychological: depression or fear</li>
+                      <li>Also common: seizures, anxiety, blank stare, headache, sleepiness, staring spells, or temporary paralysis after a seizure</li>
+                    </ul>
+                  </div>
+                  <div id="epilepsy4" class="col s12">
+                   Since the cause of epilepsy is often not clear, it generally is not possible to prevent it.
+                  <br>
+                  Head injury, a common cause of epilepsy, may be preventable. Always wear your seat belt in the car and a helmet when riding a bike or motorcycle, skiing, skating, or horseback riding.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="f">
+              <div class="collapsible-header">Flu</div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <div class="col s12" style="padding-bottom:20px;">
+                    <ul class="tabs">
+                      <li class="tab col s3"><a href="#flu1">ABOUT</a></li>
+                      <li class="tab col s3"><a href="#flu2">CAUSES</a></li>
+                      <li class="tab col s3"><a href="#flu3">SYMPTOMS</a></li>
+                      <li class="tab col s3"><a href="#flu4">PREVENTION</a></li>
+                    </ul>
+                  </div>
+                  <div id="flu1" class="col s12">
+                  <img class="responsive-img" src="images/flu1.jpg">
+                  <br>Influenza, commonly known as the "flu," is an extremely contagious respiratory illness caused by influenza A or B viruses. Flu appears most frequently in winter and early spring. The flu virus attacks the body by spreading through the upper and/or lower respiratory tract.</div>
+                  <div id="flu2" class="col s12">
+                    While more than 100 different viruses can cause a cold, only influenza virus types A, B, and C cause the flu.
+                    <br><br>
+                    Type A and B viruses cause the large seasonal outbreaks. Type C usually causes milder respiratory symptoms. While the flu vaccine can help protect you from types A and B, there is no immunization for type C virus.
+                    <br><br>
+                    Type A flu viruses are also found in many different animals, including ducks, chickens, pigs, whales, horses, and seals. Type B viruses only affect people.
+                  </div>
+                  <div id="flu3" class="col s12">
+                    Unlike a cold, flu symptoms usually come on suddenly. Another key difference is a fever, which might not happen with a cold. You might also have:
+                    <ul>
+                      <li>Severe aches in muscles and joints</li>
+                      <li>Pain and tiredness around your eyes</li>
+                      <li>Weakness or extreme fatigue</li>
+                      <li>Warm, flushed skin and red, watery eyes</li>
+                      <li>A headache</li>
+                      <li>A dry cough</li>
+                      <li>A sore throat and runny nose</li>
+                    </ul>
+                    Adults with seasonal flu don’t usually vomit or have diarrhea, but children might. Some symptoms can mean your illness is severe.
+                  </div>
+                  <div id="flu4" class="col s12">
+                   The trick is not to get sick in the first place. Here are proven ways to avoid the flu:
+                   <ul>
+                     <li>Get Vaccinated</li>
+                     <li>Build a Germ Barrier: Wash your hands with warm water and soap every time you shake hands or touch a surface that might be germ-covered.
+                    Carry an alcohol-based hand sanitizer with you for times when you can’t get to a sink.
+                    Bring along disinfectant wipes to clean any surfaces you're about to touch.
+                    Take extra care to not touch your mouth, eyes, or nose without washing your hands first.</li>
+                    <li>Take Care of Yourself: Eat a balanced diet.
+                    Exercise at least 4 days a week.
+                    Get 7 to 9 hours of sleep a night.</li>
+                    <li>Quit Smoking</li>
+                   </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="g">
+              <div class="collapsible-header">Gout</div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <div class="col s12" style="padding-bottom:20px;">
+                    <ul class="tabs">
+                      <li class="tab col s3"><a href="#gout1">ABOUT</a></li>
+                      <li class="tab col s3"><a href="#gout2">CAUSES</a></li>
+                      <li class="tab col s3"><a href="#gout3">SYMPTOMS</a></li>
+                      <li class="tab col s3"><a href="#gout4">PREVENTION</a></li>
+                    </ul>
+                  </div>
+                  <div id="gout1" class="col s12">
+                    Gout is a kind of arthritis. It can cause an attack of sudden burning pain, stiffness, and swelling in a joint, usually a big toe. These attacks can happen over and over unless gout is treated. Over time, they can harm your joints, tendons, and other tissues. Gout is most common in men.
+                    <br><br>
+                    Gout is caused by too much uric acid in the blood. Most of the time, having too much uric acid isn't harmful. Many people with high levels in their blood never get gout. But when uric acid levels in your blood are too high, the uric acid may form hard crystals in your joints.
+                    <br><br>
+                    Your chances of getting gout are higher if you are overweight, drink too much alcohol, or eat too much meat and fish that are high in chemicals called purines. Some medicines, such as water pills (diuretics), can also bring on gout.
+                  </div>
+                  <div id="gout2" class="col s12">
+                    Gout can seem to flare up without specific cause. Or it can be brought on by:
+                    <ul>
+                      <li>Certain conditions related to diet and body weight, such as being overweight, eating a diet rich in meat and seafood (high-purine foods), and drinking too much alcohol.</li>
+                      <li>Medicines that may increase uric acid concentration, such as regular use of aspirin or niacin or using medicines that reduce the amount of salt and water in the body (diuretics).</li>
+                      <li>Major illness or certain medical conditions, such as rapid weight loss or high blood pressure.</li>
+                      <li>Surgery.</li>
+                      <li>Having been born with a rare condition that causes high blood uric acid levels.</li>
+                      <li>People with Kelley-Seegmiller syndrome or Lesch-Nyhan syndrome have a partial or complete deficiency in an enzyme that helps to control uric acid levels.</li>
+                    </ul>
+                  </div>
+                  <div id="gout3" class="col s12">
+                    Symptoms of gout include:
+                    <ul>
+                      <li>Warmth, pain, swelling, and extreme tenderness in a joint, usually a big toe joint camera.gif. This symptom is called podagra. The pain often starts during the night. It may get worse quickly, last for hours, and be so intense that even light pressure from a sheet is intolerable.</li>
+                      <li>Very red or purplish skin around the affected joint. The joint may appear to be infected.</li>
+                      <li>Limited movement in the affected joint.</li>
+                      <li>Peeling and itching of the skin around the affected joint as the gout gets better.</li>
+                    </ul>
+                  </div>
+                  <div id="gout4" class="col s12">
+                    <img class="responsive-img" src="images/gout1.jpg"><br>
+                   Gout usually develops after a number of years of buildup of uric acid crystals in the joints and surrounding tissue. You probably won't know that you have an elevated uric acid level in your blood until you have had your first gout attack.
+
+                   But you can help prevent or reduce the severity of future gout attacks.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="h">
+              <div class="collapsible-header">Heat stroke</div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <div class="col s12" style="padding-bottom:20px;">
+                    <ul class="tabs">
+                      <li class="tab col s3"><a href="#heat_stroke1">ABOUT</a></li>
+                      <li class="tab col s3"><a href="#heat_stroke2">CAUSES</a></li>
+                      <li class="tab col s3"><a href="#heat_stroke3">SYMPTOMS</a></li>
+                      <li class="tab col s3"><a href="#heat_stroke4">PREVENTION</a></li>
+                    </ul>
+                  </div>
+                  <div id="heat_stroke1" class="col s12">
+                  <img class="responsive-img" src="images/heat_stroke1.png"><br>Heat stroke is the most serious form of heat injury and is considered a medical emergency. If you suspect that someone has heat stroke -- also known as sunstroke -- call 911 immediately and give first aid until paramedics arrive.<br>
+                  Heat stroke can kill or cause damage to the brain and other internal organs. Although heat stroke mainly affects people over age 50, it also takes a toll on healthy young athletes.<br>
+                  Heat stroke often occurs as a progression from milder heat-related illnesses such as heat cramps, heat syncope (fainting), and heat exhaustion. But it can strike even if you have no previous signs of heat injury.<br>
+                  Heat stroke results from prolonged exposure to high temperatures -- usually in combination with dehydration -- which leads to failure of the body's temperature control system. The medical definition of heat stroke is a core body temperature greater than 105 degrees Fahrenheit, with complications involving the central nervous system that occur after exposure to high temperatures. Other common symptoms include nausea, seizures, confusion, disorientation, and sometimes loss of consciousness or coma.
+                  </div>
+                  <div id="heat_stroke2" class="col s12">
+                  Heatstroke can occur as a result of:
+                  <ul>
+                    <li>Exposure to a hot environment. In a type of heatstroke, called nonexertional or classic heatstroke, being in a hot environment leads to a rise in body temperature. This type of heatstroke typically occurs after exposure to hot, humid weather, especially for prolonged periods, such as two or three days. It occurs most often in older adults and in people with chronic illness.</li>
+                    <li>Strenuous activity. Exertional heatstroke is caused by an increase in body temperature brought on by intense physical activity in hot weather. Anyone exercising or working in hot weather can get exertional heatstroke, but it's most likely to occur if you're not used to high temperatures.</li>
+                  </ul>
+                  In either type of heatstroke, your condition can be brought on by:
+                  <ul>
+                    <li>Wearing excess clothing that prevents sweat from evaporating easily and cooling your body</li>
+                    <li>Drinking alcohol, which can affect your body's ability to regulate your temperature</li>
+                    <li>Becoming dehydrated by not drinking enough water to replenish fluids lost through sweating </li>
+                  </ul>
+                  </div>
+                  <div id="heat_stroke3" class="col s12">
+                    The hallmark symptom of heat stroke is a core body temperature above 105 degrees Fahrenheit. But fainting may be the first sign.
+                    <br>
+                    Other symptoms may include:
+                    <br>
+                    <ul>
+                      <li>Throbbing headache</li>
+                      <li>Dizziness and light-headedness</li>
+                      <li>Lack of sweating despite the heat</li>
+                      <li>Red, hot, and dry skin</li>
+                      <li>Muscle weakness or cramps</li>
+                      <li>Nausea and vomiting</li>
+                      <li>Rapid heartbeat, which may be either strong or weak</li>
+                      <li>Rapid, shallow breathing</li>
+                      <li>Behavioral changes such as confusion, disorientation, or staggering</li>
+                      <li>Seizures</li>
+                      <li>Unconsciousness</li>
+                    </ul>
+                  </div>
+                  <div id="heat_stroke4" class="col s12">
+                   When the heat index is high, it's best to stay in an air-conditioned environment. If you must go outdoors, you can prevent heat stroke by taking these steps:
+                    <ul>
+                      <li>Wear lightweight, light-colored, loose-fitting clothing, and a wide-brimmed hat.</li>
+                      <li>Use a sunscreen with a sun protection factor (SPF) of 30 or more.</li>
+                      <li>Drink extra fluids. To prevent dehydration, it's generally recommended to drink at least eight glasses of water, fruit juice, or vegetable juice per day. Because heat-related illness also can result from salt depletion, it may be advisable to substitute an electrolyte-rich sports drink for water during periods of extreme heat and humidity.</li>
+                      <li>Take additional precautions when exercising or working outdoors.The general recommendation is to drink 24 ounces of fluid two hours before exercise, and consider adding another 8 ounces of water or sports drink right before exercise. During exercise, you should consume another 8 ounces of water every 20 minutes, even if you don't feel thirsty.</li>
+                      <li>Reschedule or cancel outdoor activity. If possible, shift your time outdoors to the coolest times of the day, either early morning or after sunset.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!--<li id="g">
+              <div class="collapsible-header">Asthma</div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <div class="col s12" style="padding-bottom:20px;">
+                    <ul class="tabs">
+                      <li class="tab col s3"><a href="#asthma1">ABOUT</a></li>
+                      <li class="tab col s3"><a href="#asthma2">CAUSES</a></li>
+                      <li class="tab col s3"><a href="#asthma3">SYMPTOMS</a></li>
+                      <li class="tab col s3"><a href="#asthma4">PREVENTION</a></li>
+                    </ul>
+                  </div>
+                  <div id="asthma1" class="col s12">The</div>
+                  <div id="asthma2" class="col s12">
+                    All
+                  </div>
+                  <div id="asthma3" class="col s12">
+                    ed.
+                  </div>
+                  <div id="asthma4" class="col s12">
+                   ly
+                  </div>
+                </div>
+              </div>
+            </li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer teal">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Company Bio</h5>
+            <p class="grey-text text-lighten-4">We are a team of college students working on this project. We aim to provide a complete health care system to make your life easier.</p>
+
+
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="white-text" href="#!">Forum</a></li>
+              <li><a class="white-text" href="#">Diseases</a></li>
+              <li><a class="white-text" href="news.html">News</a></li>
+              <li><a class="white-text" href="medicines.html">Medicines</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Connect</h5>
+            <div>
+              <cite title="Sharlet Shubham"><a class="white-text" href="mailto:#" style="font-style: normal;"><i class="material-icons left">email</i>Email: shsh@gmail.com</a></cite>
+            </div>
+            <br>
+            <li class="white-text" style="display:inline; padding-right: 10px;">Follow us: </li>
+            <li style="display:inline; padding-right: 10px;"><a href="#" title="facebook"><i class="fa fa-facebook-square fa-2x" style="color: #3D5B99;" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#3D5B99'"></i></a></li>
+            <li style="display:inline; padding-right: 10px;"><a href="#" title="twitter"><i class="fa fa fa-twitter-square fa-2x" style="color: #58AEE8;" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#58AEE8'"></i></a></li>
+            <li style="display:inline; padding-right: 10px;"><a href="#" title="google+"><i class="fa fa-google-plus-square fa-2x" style="color: #EA4335" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#EA4335'"></i></a></li>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container" align="center">
+          <cite title="Sharlet Shubham" style="font-style: normal;">Made by <a class="brown-text text-lighten-3" href="#">SS</a></cite>
+        </div>
+      </div>
+    </footer>
+
+    <cite title="Back to top"><a href="#" id="back-top" class="btn-floating btn-large waves-effect waves-light black scrollToTop"><i class="material-icons">navigation</i></a></cite>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+      $( document ).ready(function)
+      {
+        $(".dropdown-button").dropdown();
+      }
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal-trigger').leanModal();
+    });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+  
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 500) {
+      $('.scrollToTop').fadeIn();
+    } else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+  
+  //Click event to scroll to top
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+  
+});
+    </script>
+  </body>
+</html>

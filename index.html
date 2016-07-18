@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>HOME | Care for You</title>
+  <link rel="icon" type="image/iconx" href="images/logo.png">
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="diseases.html">Diseases</a></li>
+    <li><a href="medicines.html">Medicines</a></li>
+    <li><a href="news.html">News</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">About us</a></li>
+  </ul>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container-fluid">
+      <a id="logo-container" href="#" class="brand-logo"><img src="images/main_logo.png" alt="Care For You" width="227" height="56"/></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li class="active"><a href="#"><span>Home</span></a></li>
+        <li><a href="#"><span>Forum</span></a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><span style="margin: 0px;">More<i class="material-icons right" style="margin: 0px;">arrow_drop_down</i></span></a></li>
+        <li><a style="color:#26A69A; padding-right:0; padding-left:30px;" href="#modal_login" class="modal-trigger"><span style="margin: 0px;">Login<i class="material-icons right" style="margin: 0px;">perm_identity</i></span></a></li>
+        <li><a style="color:#26A69A;" href="#modal_signup" class="modal-trigger"><span style="margin: 0px;">Register<i class="material-icons right" style="margin: 0px;">perm_identity</i></span></a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#">Forum</a></li>
+        <li><a href="diseases.html">Diseases</a></li>
+        <li><a href="medicines.html">Medicines</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a style="color:#26A69A;" href="#modal_login" class="modal-trigger">Login<i class="material-icons right">perm_identity</i></a></li>
+        <li><a style="color:#26A69A;" href="#modal_signup" class="modal-trigger">Register<i class="material-icons right">perm_identity</i></a></li>
+      </ul>
+      
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container slider">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 id="heading" class="header center teal-text text-lighten-2" style="font-family: Georgia;">Smarter Health Care On The Go!</h1>
+        <div class="row center">
+          <h5 id="desc" class="header col s12 light">A health care portal to make your lives easy. Sign Up and discuss your health related queries here.</h5>
+        </div>
+        <div class="row center">
+          <a href="#modal_signup" id="download-button" class="btn-large waves-effect waves-light teal lighten-1 modal-trigger">Sign Up Now</a>
+        </div>
+        <br><br>
+      </div>
+    </div>
+  </div>
+  <div id="modal_signup" class="modal">
+    <form>
+      <div class="modal-content">
+        <h4 align="center">Sign Up</h4>
+        <div class="form-group">
+          <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email"class="form-control" id="email" placeholder="Email Id" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="password"class="form-control" id="password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="cpassword"class="form-control" id="confirmpassword" placeholder="Confirm Password" required>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action waves-effect waves-green btn-flat">Register</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </form>
+  </div>
+
+  <div id="modal_login" class="modal">
+    <form>
+      <div class="modal-content">
+        <h4 align="center">Log In</h4>
+        <div class="form-group">
+          <input type="email" name="email"class="form-control" id="email" placeholder="Email Id" required>
+        </div>
+        <div class="form-group">
+          <input type="password" name="password"class="form-control" id="password" placeholder="Password" required>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action waves-effect waves-green btn-flat">Log In</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"><a class="brown-text" href="#"><i class="material-icons">group</i></a></h2>
+            <h5 class="center">Forum</h5>
+
+            <p class="light">We provide a vibrant online health forum, where conversations on multiple health conditions take place daily. Many patients participate in this community to receive guidance, motivation, and support from peers and experts.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"><a class="brown-text" href="news.html"><i class="material-icons">today</i></a></h2>
+            <h5 class="center">Medical News</h5>
+
+            <p class="light">Stay updated about the latest happenings in the medical world. The section provides medical news from multiple trustworthy sources. Stay informed and stay safe!</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center"><a class="brown-text" href="diseases.html"><i class="material-icons">accessibility</i></a></h2>
+            <h5 class="center">Diseases</h5>
+
+            <p class="light">Want to know about the symptoms, causes and prevention of a disease? We have provided detailed descriptions about various diseases. Here is an alphabetical guide to make it easy for you to search for a particular medical condition.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="parallax"><img src="images/background4.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Why use Care For You?</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light"><a style="color:black" href="medicines.html">Know more about various medicines and their trade names here!</a></h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/background5.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project. We aim to provide a complete health care system to make your life easier.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Forum</a></li>
+            <li><a class="white-text" href="diseases.html">Diseases</a></li>
+            <li><a class="white-text" href="news.html">News</a></li>
+            <li><a class="white-text" href="medicines.html">Medicines</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <div>
+            <cite title="Sharlet Shubham"><a class="white-text" href="mailto:#" style="font-style: normal;"><i class="material-icons left">email</i>Email: shsh@gmail.com</a></cite>
+          </div>
+          <br>
+          <li class="white-text" style="display:inline; padding-right: 10px;">Follow us: </li>
+          <li style="display:inline; padding-right: 10px;"><a href="#" title="facebook"><i class="fa fa-facebook-square fa-2x" style="color: #3D5B99;" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#3D5B99'"></i></a></li>
+          <li style="display:inline; padding-right: 10px;"><a href="#" title="twitter"><i class="fa fa fa-twitter-square fa-2x" style="color: #58AEE8;" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#58AEE8'"></i></a></li>
+          <li style="display:inline; padding-right: 10px;"><a href="#" title="google+"><i class="fa fa-google-plus-square fa-2x" style="color: #EA4335" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#EA4335'"></i></a></li>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container" align="center">
+        <cite title="Sharlet Shubham" style="font-style: normal;">Made by <a class="brown-text text-lighten-3" href="#">SS</a></cite>
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    $( document ).ready(function)
+    {
+      $(".dropdown-button").dropdown();
+    }
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+  </script>
+  <script type="text/javascript">
+    $(window).load(function () {
+    var images = ['images/background1.jpg', 'images/background2.jpg', 'images/background3.jpg'];
+    var i = 0;
+    function changeBackground() {
+        $('.slider').css('background-image', function () {
+            if (i >= images.length) {
+                i = 0;
+            }
+            return 'url(' + images[i++] + ')';
+        });
+    }
+    // Call it on the first time
+    changeBackground();
+    // Set an interval to continue
+    setInterval(changeBackground, 5000);
+});
+  </script>
+  </body>
+</html>

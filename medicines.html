@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>MEDICINES | Care for You</title>
+    <link rel="icon" type="image/iconx" href="images/logo.png">
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <style type="text/css">
+      @media only screen and (min-width: 600px)
+      {
+        .card-content{
+          height:200px;
+        }  
+      }
+      .card-action a{
+        color: #26a69a !important;
+      }
+      .card-action a:hover{
+        color: #000 !important;
+        font-weight: bold;
+      }
+      .collapsible-body{
+      	font-weight: normal;
+      }
+      .collapsible-body div{
+      	margin:10px; 
+      	padding: 20px; 
+      	border-radius:25px; 
+      	border:1px solid #26A69A;
+      }
+      .collapsible-body h4{
+      	color:#26A69A;
+      }
+      .collapsible-body p{
+      	padding:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="diseases.html">Diseases</a></li>
+      <li class="active"><a href="#">Medicines</a></li>
+      <li><a href="news.html">News</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">About us</a></li>
+    </ul>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container-fluid">
+        <a id="logo-container" href="index.html" class="brand-logo"><img src="images/main_logo.png" alt="Care For You" width="227" height="56"/></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html"><span>Home</span></a></li>
+          <li><a href="#"><span>Forum</span></a></li>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><span style="margin: 0px;">More<i class="material-icons right" style="margin: 0px;">arrow_drop_down</i></span></a></li>
+          <li><a style="color:#26A69A; padding-right:0; padding-left:30px;" href="#modal_login" class="modal-trigger"><span style="margin: 0px;">Login<i class="material-icons right" style="margin: 0px;">perm_identity</i></span></a></li>
+          <li><a style="color:#26A69A;" href="#modal_signup" class="modal-trigger"><span style="margin: 0px;">Register<i class="material-icons right" style="margin: 0px;">perm_identity</i></span></a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#">Forum</a></li>
+          <li><a href="diseases.html">Diseases</a></li>
+          <li><a href="#">Medicines</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a style="color:#26A69A;" href="#modal_login" class="modal-trigger">Login<i class="material-icons right">perm_identity</i></a></li>
+          <li><a style="color:#26A69A;" href="#modal_signup" class="modal-trigger">Register<i class="material-icons right">perm_identity</i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="modal_signup" class="modal">
+      <form>
+        <div class="modal-content">
+          <h4 align="center">Sign Up</h4>
+          <div class="form-group">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email"class="form-control" id="email" placeholder="Email Id" required>
+          </div>
+          <div class="form-group">
+            <input type="password" name="password"class="form-control" id="password" placeholder="Password" required>
+          </div>
+          <div class="form-group">
+            <input type="password" name="cpassword"class="form-control" id="confirmpassword" placeholder="Confirm Password" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action waves-effect waves-green btn-flat">Register</a>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </form>
+    </div>
+
+    <div id="modal_login" class="modal">
+      <form>
+        <div class="modal-content">
+          <h4 align="center">Log In</h4>
+          <div class="form-group">
+            <input type="email" name="email"class="form-control" id="email" placeholder="Email Id" required>
+          </div>
+          <div class="form-group">
+            <input type="password" name="password"class="form-control" id="password" placeholder="Password" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action waves-effect waves-green btn-flat">Log In</a>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col l10 m10 s12 push-l1 push-m1">
+          <div class="card" style="background-image: url(images/medicines.jpg);">
+            <div class="card-content" >
+              <span class="card-title"><h4>Medicines</h4></span>
+              <p style="font-size: 20px;">Click on the medicine to know its usage, trade names and pricing.</p>
+            </div>
+            <div class="card-action">
+              <a href="#a">A</a>
+              <a href="#b">B</a>
+              <a href="#c">C</a>
+              <a href="#d">D</a>
+              <a href="#e">E</a>
+              <a href="#f">F</a>
+              <a href="#g">G</a>
+              <a href="#h">H</a>
+              <a href="#i">I</a>
+              <a href="#j">J</a>
+              <a href="#k">K</a>
+              <a href="#l">L</a>
+              <a href="#m">M</a>
+              <a href="#n">N</a>
+              <a href="#o">O</a>
+              <a href="#p">P</a>
+              <a href="#q">Q</a>
+              <a href="#r">R</a>
+              <a href="#s">S</a>
+              <a href="#t">T</a>
+              <a href="#u">U</a>
+              <a href="#v">V</a>
+              <a href="#w">W</a>
+              <a href="#x">X</a>
+              <a href="#y">Y</a>
+              <a href="#z">Z</a>
+            </div>
+          </div>
+
+          <div class="row">
+			<div class="col l6 s6 m6"><b>Category Name</b></div>
+			<div class="col l6 s6 m6"><b>Total No. of Brands</b></div>            			
+          </div>
+          <ul class="collapsible popout" data-collapsible="accordion">
+            <li id="a">
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Abciximab</div>
+						<div class="col l6 s6 m6">1</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Abciximab: An antithrombolytic agent (blood thinner)</h4>
+						<h5 align="center">Usage</h5>
+						<p>Used to prevent blood clots during certain procedures used to open up the blood vessels in the heart (e.g., balloon angioplasty, coronary stent placement, percutaneous coronary intervention-PCI).</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in patients with cerebrovascular accident (CVA), internal bleeding, blood clotting/bleeding disorders, brain tumor, uncontrolled high blood pressure, recent surgery and hypersensitivity.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Reopro</td>
+									<td>Eli Lilly and Company (India) Pvt Ltd</td>
+									<td>2mg/1ml</td>
+									<td>5ml</td>
+									<td>19740</td>
+								</tr>
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Aceclofenac</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Aceclofenac</h4>
+						<h5 align="center">Usage</h5>
+						<p>Used to prevent fever, pain, ankylosing spondylitis and arthritis.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in patients with severe ulcer, gastrointestinal bleeding, and hypersensitivity.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+			                      <td>A -Niclo 100 </td>
+			                      <td>Aknil Biotech</td>
+			                      <td>100mg</td>
+			                      <td>10Tablet</td>
+			                      <td>22</td>
+			                    </tr>
+			                    <tr>
+			                      <td>Aace Fa 100</td>
+			                      <td>M.M. Pharma</td>
+			                      <td>100mg</td>
+			                      <td>10Tablet</td>
+			                      <td>23.7</td>
+			                    </tr>
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Acitretin</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Acitretin</h4>
+						<h5 align="center">Usage</h5>
+						<p>Used to prevent severe psoriasis (abnormal growth of skin cells that causes red, thickened, or scaly skin)It regulates the growth of epidermal cells.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in patients with liver, kidney impairment, during pregnancy (before the start, during and at least 2-3 yr after cessation of therapy), lactation, increased level of lipids in blood.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Acrotac</td>
+									<td>Croslands (Ranbaxy Laboratories Ltd</td>
+									<td>10mg</td>
+									<td>20Capsule</td>
+									<td>495</td>
+								</tr>
+								<tr>
+									<td>Aceret</td>
+									<td>Gracewell (Glenmark Pharmaceuticals Ltd.)</td>
+									<td>25mg</td>
+									<td>10Capsule</td>
+									<td>667</td>
+								</tr>
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Albuterol</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Albuterol</h4>
+						<h5 align="center">Usage</h5>
+						<p>Used to prevent and treat wheezing, shortness of breath, coughing, and chest tightness caused by lung diseases such as asthma and chronic obstructive pulmonary disease.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in hypersensitivity.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td> Codex</td>
+				                    <td>Harisons Pharmaceuticals Ltd</td>
+				                    <td>4mg/50mg/1mg/1mg/5ml</td>
+				                    <td>100ml</td>
+				                    <td>38.7</td>
+				                </tr>
+				                <tr>
+				                    <td> Asmanil</td>
+				                    <td>Inga Laboratories Pvt. Ltd</td>
+				                    <td>2mg</td>
+				                    <td>10Tablet</td>
+				                    <td>1</td>
+				                </tr>
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Alendronate</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Alendronate</h4>
+						<h5 align="center">Usage</h5>
+						<p>Used for prevention and treatment of osteoporosis in men and postmenopausal women. It is also used for Paget's disease and osteoporosis caused by steroid treatment. It reduces the amount of calcium released from the bones into the blood.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Animal reproduction studies have shown an adverse effect on the fetus and there are no adequate and well-controlled studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Ralenost</td>
+				                    <td>Consumer Healthcare (Ranbaxy Laboratories Ltd)</td>
+				                    <td>10mg</td>
+				                    <td>10 Tablet</td>
+				                    <td>49.5</td>
+				                </tr>
+				                <tr>
+				                    <td>  Denfos</td>
+				                    <td>Dr Reddy Laboratories Ltd</td>
+				                    <td>10mg</td>
+				                    <td>10 Tablet</td>
+				                    <td>49.77</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li id="b">
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Balsalazide</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Balsalazide</h4>
+						<h5 align="center">Usage</h5>
+						<p>This medication is an anti-inflammatory agent, prescribed for ulcerative colitis. The medication reduces inflammation of colon.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in hypersensitivity.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Cozabal</td>
+				                    <td>Sun Rise International Labs Ltd.</td>
+				                    <td>750mg</td>
+				                    <td>10Capsule</td>
+				                    <td>90</td>
+			                  	</tr>
+			                  	<tr>
+				                    <td>Intazide</td>
+				                    <td>Intas Pharmaceuticals Ltd. (Arron)</td>
+				                    <td>750mg</td>
+				                    <td>10Capsule</td>
+				                    <td>95.5</td>
+			                  	</tr>			
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Beclomethasone</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Beclomethasone</h4>
+						<h5 align="center">Usage</h5>
+						<p>Used to prevent asthma attacks.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in hypersensitivity.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Zovate -GN</td>
+				                    <td>Glaxo Smithkline Pharmaceuticals Ltd.</td>
+				                    <td>1lak-iu / 0.025% / 0.1% / 15gm</td>
+				                    <td>15gm</td>
+				                    <td>14.09</td>
+				                </tr>
+				                <tr>
+				                    <td></td>
+				                    <td></td>
+				                    <td></td>
+				                    <td></td>
+				                    <td></td>
+				                </tr>
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Bezafibrate</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Bezafibrate</h4>
+						<h5 align="center">Usage</h5>
+						<p>Used to prevent high cholesterol in blood.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in patients with liver disease, gallstones or gallbladder disorders; severe kidney insufficiency, decreased albumin level in blood, pregnancy and lactation.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Globez</td>
+				                    <td>Globus Remedies Ltd</td>
+				                    <td>  200mg</td>
+				                    <td>10Capsule</td>
+				                    <td>76</td>
+				                </tr>
+				                <tr>
+				                    <td>Beza -XL</td>
+				                    <td>Aristo Pharmaceuticals Pvt Ltd. (Otsira)</td>
+				                    <td>400mg</td>
+				                    <td>10Tablet</td>
+				                    <td>90.19</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Bupropion</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Bupropion</h4>
+						<h5 align="center">Usage</h5>
+						<p>This medication is prescribed for depression and smoking cessation.It reduces the cravings, anxiety, irritability and other symptoms associated with depression.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in patients who are allergic to bupropion, history of convulsions, eating disorders, with MAO inhibitors or those who are planning to stop sedatives or alcohol suddenly.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Nicotex</td>
+				                    <td>Cipla Limited</td>
+				                    <td> 150mg</td>
+				                    <td>10Capsule</td>
+				                    <td>137.5</td>
+				                </tr>
+				                <tr>
+				                    <td>Bupdep</td>
+				                    <td>Mediez Pharma Pvt.Ltd</td>
+				                    <td>150mg</td>
+				                    <td>10Tablet</td>
+				                    <td>85</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>		
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Butenafine</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Butenafine</h4>
+						<h5 align="center">Usage</h5>
+						<p>Used to prevent dermatological infections such as tinea versicolor (rashes on the trunk region of the body), athlete’s foot, ringworm, and jock itch that prevent the growth of fungus.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Application to eye area.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Fintop</td>
+				                    <td>Glenmark Pharmaceuticals Ltd. (Gracewell)</td>
+				                    <td>1% </td>
+				                    <td>15gm</td>
+				                    <td>68.5</td>
+				                </tr>
+				                <tr>
+				                    <td>Butop</td>
+				                    <td>Aronex Life Science Pvt. Ltd.</td>
+				                    <td>1%/0.2%/15gm</td>
+				                    <td>15gm</td>
+				                    <td>52</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li id="c">
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Capsaicin</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center"></h4>
+						<h5 align="center">Usage</h5>
+						<p>This medication is prescribed for neuropathic pain associated with postherpetic neuralgia.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>None.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Nimulid Nugel</td>
+				                    <td>Panacea Biotec Ltd</td>
+				                    <td>50mg / 100mg / 10mg / 30mg / 0.1mg / 30gm </td>
+				                    <td>30gm</td>
+				                    <td>52.94</td>
+				                </tr>
+				                <tr>
+				                    <td>Myolaxin (30 gm)</td>
+				                    <td>Geno Pharmaceuticals Ltd.</td>
+				                    <td>10% / 20% / 5% / 0.075% / 5% / 30gm</td>
+				                    <td>30gm</td>
+				                    <td>37.06</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Carvedilol</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Carvedilol</h4>
+						<h5 align="center">Usage</h5>
+						<p>This medication is prescribed for heart failure and high blood pressure.  It relaxes blood vessels and slowing heart rate to improve blood flow and decreases blood pressure.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in hypersensitivity; severe chronic heart failure, bronchial asthma or similar conditions, severe liver damage.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Cadmos</td>
+				                    <td>VHB Life Science Inc. (Cronus)</td>
+				                    <td>3.125mg</td>
+				                    <td>10Capsule</td>
+				                    <td>12</td>
+				                </tr>
+				                <tr>
+				                    <td>Coslot</td>
+				                    <td>Ranbaxy Diagnostics</td>
+				                    <td>3.125mg</td>
+				                    <td>10Tablet</td>
+				                    <td>9</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Cefaclor</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Cefaclor</h4>
+						<h5 align="center">Usage</h5>
+						<p>This medication is a cephalosporin antibiotic, prescribed for certain infection caused by bacteria such as pneumonia, ear, lung, skin, throat, and urinary tract infections.  It works by fighting against bacteria in the body.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in Hypersensitivity.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Radiclor</td>
+				                    <td>Radicura Pharmaceuticals</td>
+				                    <td>125mg per 5ml</td>
+				                    <td>30ml</td>
+				                    <td>69</td>
+				                </tr>
+				                <tr>
+				                    <td>Keflor</td>
+				                    <td>Ranbaxy</td>
+				                    <td>250mg</td>
+				                    <td>10Tablet</td>
+				                    <td>245</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Cefadroxil</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Cefadroxil</h4>
+						<h5 align="center">Usage</h5>
+						<p>This medication is prescribed for certain types of bacterial infections such as urinary tract infection, skin and soft- tissue, pharynx (throat) and tonsils (tonsillitis).</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Hypersensitivity.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Drosafe (500mg)</td>
+				                    <td>Hamax Pharmaceuticals</td>
+				                    <td>500mg </td>
+				                    <td>10Tablet</td>
+				                    <td>36.7</td>
+				                </tr>
+				                <tr>
+				                    <td>Qceph (250mg)</td>
+				                    <td>Emcure Pharmaceuticals Ltd</td>
+				                    <td>250mg</td>
+				                    <td>10Tablet<</td>
+				                    <td>35.42</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>						
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Celiprolol</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Celiprolol</h4>
+						<h5 align="center">Usage</h5>
+						<p>This medication is prescribed for hypertension.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in patients with asthma, severe heart diseases, shock, kidney impairment, low blood pressure, and hypersensitivity.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Celipres (100 mg)</td>
+				                    <td>PRanbaxy Diagnostics</td>
+				                    <td>100mg</td>
+				                    <td>10Tablet</td>
+				                    <td>27.7</td>
+				                </tr>
+				                <tr>
+				                    <td>Celicard (200 mg)</td>
+				                    <td>US Vitamins Limited</td>
+				                    <td>200mg</td>
+				                    <td>10Tablet</td>
+				                    <td>83.54</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li id="d">
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Dalteparin</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Dalteparin</h4>
+						<h5 align="center">Usage</h5>
+						<p>It prevents blood clots in persons undergoing surgery. Along with aspirin this medication is prescribed for heart attack, unstable angina (chest pain). It is also used to reduce the recurrence of blood clots in certain cancer patients and during dialysis.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Hypersensitivity, active major bleeding, severe coagulation disorders; lumbar puncture; sympathetic block; brain, spinal cord, eye or ear surgery; severe hypertension.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td> Fragmin vial</td>
+				                    <td>P. Upjohn</td>
+				                    <td>1 L u</td>
+				                    <td>10 ml</td>
+				                    <td>1750.39</td>
+				                </tr>
+				                <tr>
+				                    <td>Fragmin PF-syringe</td>
+				                    <td>P. Upjohn</td>
+				                    <td>7500 iu</td>
+				                    <td>1</td>
+				                    <td>592.63</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Danazol</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Danazol</h4>
+						<h5 align="center">Usage</h5>
+						<p>This medication is a synthetic steroid, prescribed for endometriosis and hereditary angioedema.  By reducing certain hormones level, the severity of diseases treated by danazol will decrease.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in patients with undiagnosed vaginal bleeding, liver, kidney impairment, during pregnancy, breast-feeding and hypersensitivity.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>  Pozol</td>
+				                    <td>Biomax Biotechnics</td>
+				                    <td>100mg</td>
+				                    <td>10 Tablet</td>
+				                    <td>189</td>
+				                </tr>
+				                <tr>
+				                    <td>Ladogal</td>
+				                    <td>Sanofi Synthelabo (India) Ltd.</td>
+				                    <td>50mg</td>
+				                    <td>10 Capsule</td>
+				                    <td>78.65</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Darbepoetin alfa</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div class="collapsible-body">
+					<div>
+						<h4 align="center">Darbepoetin alfa</h4>
+						<h5 align="center">Usage</h5>
+						<p>This medication is prescribed for anemia due to chronic kidney disease. It stimulates the bone marrow to produce more red blood cells.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in patients with uncontrolled high blood pressure, and known hypersensitivity.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Cresp PFS (40 mcg)</td>
+				                    <td>Dr. Reddys Labs Ltd</td>
+				                    <td>40mcg/1Vial</td>
+				                    <td>1Vial</td>
+				                    <td>2050</td>
+				                </tr>
+				                <tr>
+				                    <td>Cresp (40 mcg)</td>
+				                    <td>Dr. Reddys Labs Ltd</td>
+				                    <td>40mcg/1Vial</td>
+				                    <td>1Vial</td>
+				                    <td>1900</td>
+				                </tr>
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Darifenacin</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Darifenacin</h4>
+						<h5 align="center">Usage</h5>
+						<p>This medication is prescribed for overactive bladder with symptoms of urinary incontinence, urgency and frequency.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in patients with urinary retention, gastric retention, increased eye pressure, and hypersensitivity. </p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td>Dariten OD (15 mg)</td>
+				                    <td>Ranbaxy Laboratories Ltd.</td>
+				                    <td>15mg</td>
+				                    <td>10 Tablet</td>
+				                    <td>289</td>
+				                </tr>
+				                <tr>
+				                    <td>Deritas (7.5mg)</td>
+				                    <td>Intas Pharmaceuticals Ltd</td>
+				                    <td>7.5mg</td>
+				                    <td>10 Capsule</td>
+				                    <td>240</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+            <li>
+				<div class="collapsible-header">
+					<div class="row">
+						<div class="col l6 s6 m6">Daunorubicin</div>
+						<div class="col l6 s6 m6">2</div>            			
+			        </div>
+				</div>
+				<div class="collapsible-body">
+					<div>
+						<h4 align="center">Daunorubicin</h4>
+						<h5 align="center">Usage</h5>
+						<p>This medication is prescribed for acute myeloid leukemia and acute lymphocytic leukemia. This medication slows the growth and spread of cancer cells in the body.</p>
+						<h5 align="center">When it is not to be taken</h5>
+						<p>Contraindicated in patients with heart disease and hypersensitivity.</p>		
+						<table class="responsive-table">
+							<thead>
+								<tr>
+									<th>Trade Name</th>
+									<th>Manufacturer</th>
+									<th>Unit</th>
+									<th>Quantity</th>
+									<th>Price(Rs.)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+				                    <td> Daunoside</td>
+				                    <td>Chandra Bhagat Pharma Pvt. Ltd.</td>
+				                    <td>20mg</td>
+				                    <td>1 injection</td>
+				                    <td>350</td>
+				                </tr>
+				                <tr>
+				                    <td>Norubin</td>
+				                    <td>Cadila Pharmaceuticals Ltd. (Oncocare)</td>
+				                    <td>200mg/20mg/1vial</td>
+				                    <td>1vial</td>
+				                    <td>360</td>
+				                </tr>	
+							</tbody>
+						</table>	
+					</div>
+				</div>			
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer teal">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Company Bio</h5>
+            <p class="grey-text text-lighten-4">We are a team of college students working on this project. We aim to provide a complete health care system to make your life easier.</p>
+
+
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="white-text" href="#!">Forum</a></li>
+              <li><a class="white-text" href="diseases.html">Diseases</a></li>
+              <li><a class="white-text" href="news.html">News</a></li>
+              <li><a class="white-text" href="#">Medicines</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Connect</h5>
+            <div>
+              <cite title="Sharlet Shubham"><a class="white-text" href="mailto:#" style="font-style: normal;"><i class="material-icons left">email</i>Email: shsh@gmail.com</a></cite>
+            </div>
+            <br>
+            <li class="white-text" style="display:inline; padding-right: 10px;">Follow us: </li>
+            <li style="display:inline; padding-right: 10px;"><a href="#" title="facebook"><i class="fa fa-facebook-square fa-2x" style="color: #3D5B99;" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#3D5B99'"></i></a></li>
+            <li style="display:inline; padding-right: 10px;"><a href="#" title="twitter"><i class="fa fa fa-twitter-square fa-2x" style="color: #58AEE8;" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#58AEE8'"></i></a></li>
+            <li style="display:inline; padding-right: 10px;"><a href="#" title="google+"><i class="fa fa-google-plus-square fa-2x" style="color: #EA4335" onmouseover="this.style='color:#ffffff'" onmouseout="this.style='color:#EA4335'"></i></a></li>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container" align="center">
+          <cite title="Sharlet Shubham" style="font-style: normal;">Made by <a class="brown-text text-lighten-3" href="#">SS</a></cite>
+        </div>
+      </div>
+    </footer>
+
+    <cite title="Back to top"><a href="#" id="back-top" class="btn-floating btn-large waves-effect waves-light black scrollToTop"><i class="material-icons">navigation</i></a></cite>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+      $( document ).ready(function)
+      {
+        $(".dropdown-button").dropdown();
+      }
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal-trigger').leanModal();
+    });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+  
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 500) {
+      $('.scrollToTop').fadeIn();
+    } else {
+      $('.scrollToTop').fadeOut();
+    }
+  });
+  
+  //Click event to scroll to top
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+  
+});
+    </script>
+  </body>
+</html>
