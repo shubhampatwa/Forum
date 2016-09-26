@@ -13,7 +13,7 @@ var bcrypt = require('bcrypt-nodejs');
 var async = require('async');
 var crypto = require('crypto');
 var mongoose=require("mongoose");
-mongoose.connect("mongodb://localhost/forum");
+mongoose.connect("mongodb://shubham:Shubham09!@ds021326.mlab.com:21326/forum");
 require('./models/Question');
 require('./models/Answer');
 require('./models/Comment');
